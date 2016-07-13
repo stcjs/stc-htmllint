@@ -1,28 +1,4 @@
-# stc-htmllint
-
-htmllint for stc
-
-## Install
-
-```sh
-npm install stc-htmllint
-```
-
-## How to use
-
-```js
-// stc.config.js
-var htmllint = require('stc-htmllint');
-
-stc.lint({
-  htmllint: {plugin: htmllint, include: /\.html$/, options: {}}
-})
-```
-
-## Default Options
-
-```js
-{
+export default {
   'attr-bans': [
     'align',
     'background',
@@ -68,7 +44,4 @@ stc.lint({
   'title-max-len': 60,
   'html-req-lang': false,
   'lang-style': 'case'
-}
-```
-
-You can use `options` to change them.
+};
