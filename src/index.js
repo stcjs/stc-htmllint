@@ -14,7 +14,12 @@ export default class HTMLLintPlugin extends Plugin {
       htmllint = require('htmllint');
     }
     if(!options){
-      options = extend({}, defaultOptions, this.options);
+      let ignoreReg = this.config.tpl.ld + ".*" + this.config.tpl.rd;
+      options = extend(defaultOptions, {
+        'attr-name-ignore-regex': ignoreReg,
+        'id-class-ignore-regex': ignoreReg,
+        'line-max-len-ignore-regex': ignoreReg,
+      }, this.options);
     }
     
     let content = await this.getContent('UTF-8');

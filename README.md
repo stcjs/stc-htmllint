@@ -1,6 +1,6 @@
 # stc-htmllint
 
-htmllint for stc
+Htmllint for stc
 
 ## Install
 
