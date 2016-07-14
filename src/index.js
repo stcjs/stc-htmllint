@@ -14,7 +14,7 @@ export default class HTMLLintPlugin extends Plugin {
       htmllint = require('htmllint');
     }
     if(!options){
-      let ignoreReg = this.config.tpl.ld + ".*" + this.config.tpl.rd;
+      let ignoreReg = this.config.tpl.ld + ".*?" + this.config.tpl.rd;
       options = extend(defaultOptions, {
         'attr-name-ignore-regex': ignoreReg,
         'id-class-ignore-regex': ignoreReg,
